@@ -5,14 +5,13 @@ class Sandbox : public Kod::Application
 public:
 	Sandbox()
 	{
-
 	}
 
 	~Sandbox()
-	{
-		 
+	{ 
 	}
 };
+
 
 Kod::Application* Kod::CreateApplication()
 {

@@ -4,12 +4,10 @@ namespace Kod {
 
 	Application::Application()
 	{
-
 	}
 
 	Application::~Application()
 	{
-
 	}
 
 	void Application::Run()

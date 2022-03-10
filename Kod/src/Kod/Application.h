@@ -2,7 +2,6 @@
 
 #include "Core.h";
 
-
 namespace Kod {
 
 	class KOD_API Application
@@ -11,7 +10,7 @@ namespace Kod {
 	public:
 		Application();
 		virtual ~Application();
-
+		
 		void Run();
 	};
 	
