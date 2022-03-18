@@ -10,6 +10,11 @@ workspace "Kod"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "Kod/vendor/GLFW/include"
+include "Kod/vendor/GLFW"
+
 project "Kod"
 	
 	location "Kod"
@@ -19,6 +24,9 @@ project "Kod"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "kodpch.h"
+	pchsource "Kod/src/kodpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -26,9 +34,19 @@ project "Kod"
 	}
 
 	includedirs
-	{
-		"%{prj.name}/vendor/spdlog/include"
+	{	
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
+
+
 
 	filter "system:windows"
 		cppdialect "C++17"
@@ -87,7 +105,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		defines
 		{

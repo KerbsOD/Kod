@@ -4,6 +4,9 @@
     <Filter Include="Kod">
       <UniqueIdentifier>{A300880B-0F0A-887C-9885-9E7C048E937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kod\Events">
+      <UniqueIdentifier>{2737E8FB-13EF-2949-7CF6-02A568CDC439}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kod.h" />
@@ -16,9 +19,26 @@
     <ClInclude Include="src\Kod\EntryPoint.h">
       <Filter>Kod</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kod\Events\ApplicationEvent.h">
+      <Filter>Kod\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kod\Events\Event.h">
+      <Filter>Kod\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kod\Events\KeyEvent.h">
+      <Filter>Kod\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kod\Events\MouseEvent.h">
+      <Filter>Kod\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Kod\Log.h">
       <Filter>Kod</Filter>
     </ClInclude>
+    <ClInclude Include="src\kodpch.h" />
+    <ClInclude Include="src\Kod\Window.h">
+      <Filter>Kod</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kod\Platforms\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kod\Application.cpp">
@@ -27,5 +47,7 @@
     <ClCompile Include="src\Kod\Log.cpp">
       <Filter>Kod</Filter>
     </ClCompile>
+    <ClCompile Include="src\kodpch.cpp" />
+    <ClCompile Include="src\Kod\Platforms\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

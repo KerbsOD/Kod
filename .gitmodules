@@ -1,3 +1,6 @@
 [submodule "Kod/Vendor/spdlog"]
 	path = Kod/Vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Kod/vendor/GLFW"]
+	path = Kod/vendor/GLFW
+	url = https://github.com/TheCherno/glfw.git
